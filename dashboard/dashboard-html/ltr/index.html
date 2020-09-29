@@ -27,15 +27,15 @@
                     <h2 class="title">Issue Or Feature</h2>
                 </div>
                 <div class="card-body">
-                    <form action="/action_page.php">
+                    <form action="/action_page.php"> 
                         <div class="form-row">
                          <div class="name">Features/Issues<span style="color: red;">*</span></div> 
                             <div class="value">
                                 <div class="input-group">
-                                    <select class="input--style-6" name="full_name" required>
-                                        <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>Issue/Bug</option>
-                                        <option>Features</option>
+                                    <select class="input--style-6" id="select" name="select" required>
+                                        <option disabled="disabled" selected="selected" value=""> Choose option</option>
+                                        <option value="issue">Issue/Bug</option>
+                                        <option value="feature">Features</option>
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <input class="btn btn--radius-2 btn--blue-2" type="submit" href="dashboard.html"></input>
+                            <input class="btn btn--radius-2 btn--blue-2" type="submit" value="submit"></input>
                         </div>
                     </form>
                 </div>
