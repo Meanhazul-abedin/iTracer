@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Get my CD collection</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "table.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(xml.responseText,"text/xml");
+  //console.log(xml.responseText);
+  console.log(xmlDoc);
+  var table="<tr><th>To Do</th><th>In Progress</th><th>Done</th><th>Approved</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  //console.table(x);
+  for (i = 0; i <x.length; i++) { 
+    for (i = 0; i <x.length; i++) { 
+            
+            table += "<tr><td>" +
+            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+            "<br>"+
+            "<button class='btn btn-info text-white'onclick='todo()'>Move to 'In Progress'</button>" +
+            "</td><td>";
+            
+            table += x[i].getElementsByTagName("TITLE1")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("ARTIST1")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COUNTRY1")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COMPANY1")[0].childNodes[0].nodeValue +
+            "<br>"+
+            "<button class='btn btn-orange text-white'onclick='todo()'>Move to 'To Do'</button>" +
+            "\n\n"+
+            "<button class='btn btn-purple text-white'onclick='todo()'>Mark as 'Done'</button>" +
+            "</td><td>";
+            
+            table += x[i].getElementsByTagName("TITLE2")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("ARTIST2")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COUNTRY2")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COMPANY2")[0].childNodes[0].nodeValue +
+            "<br>"+
+            "<button class='btn btn-success text-white'onclick='todo()'>Approve</button>" +
+            "\n\n"+
+            "<button class='btn btn-danger text-white'onclick='todo()'>Reject</button>" +
+            "</td><td>";
+            
+            table += x[i].getElementsByTagName("TITLE3")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("ARTIST3")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COUNTRY3")[0].childNodes[0].nodeValue +
+            "<br>"+
+            x[i].getElementsByTagName("COMPANY3")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
