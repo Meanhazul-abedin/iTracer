@@ -96,7 +96,7 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/27.jpg" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-pencil-alt m-r-5 m-l-5"></i> Project</a>
@@ -145,7 +145,7 @@
                             </div>
                             <!-- End User Profile-->
                         </li>
-                        <li class="p-15 m-t-10"><a href="javascript:void(0)" class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Create New</span> </a></li>
+                        <li class="p-15 m-t-10"><a href="issue.html" class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Add Feature or Issue/Bug</span> </a></li>
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
@@ -435,8 +435,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-orange text-white" onclick="todo()"> Move to "To Do"</button>
-                                                            <button class="btn btn-purple text-white" onclick="todo()">Mark as "Done"</button>
+                                                            <button class="btn btn-orange text-white" onclick="inProgress(this)"id="6"> Move to "To Do"</button>
+                                                            <button class="btn btn-purple text-white" onclick="done(this)"id="7">Mark as "Done"</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -449,8 +449,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-success text-white"onclick="todo()">Approve</button>
-                                                            <button class="btn btn-danger text-white" onclick="todo()">Reject</button>
+                                                            <button class="btn btn-success text-white"onclick="approve(this)"id="8">Approve</button>
+                                                            <button class="btn btn-danger text-white"onclick="reject(this)"id="9">Reject</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -476,7 +476,7 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-info text-white">Move to "In Progress"</button>
+                                                            <button class="btn btn-info text-white"onclick="todo(this)" id="2">Move to "In Progress"</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -489,8 +489,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-orange text-white"> Move to "To Do"</button>
-                                                            <button class="btn btn-purple text-white" >Mark as "Done"</button>
+                                                            <button class="btn btn-orange text-white"onclick="inProgress(this)"id="10"> Move to "To Do"</button>
+                                                            <button class="btn btn-purple text-white"onclick="done(this)"id="14">Mark as "Done"</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -504,7 +504,7 @@
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
                                                             <button class="btn btn-success text-white">Approve</button>
-                                                            <button class="btn btn-danger text-white" >Reject</button>
+                                                            <button class="btn btn-danger text-white"onclick="reject(this)"id="21">Reject</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -530,7 +530,7 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-info text-white">Move to "In Progress"</button>
+                                                            <button class="btn btn-info text-white"onclick="todo(this)" id="3">Move to "In Progress"</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -543,8 +543,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-orange text-white"> Move to "To Do"</button>
-                                                            <button class="btn btn-purple text-white" >Mark as "Done"</button>
+                                                            <button class="btn btn-orange text-white"onclick="inProgress(this)"id="11"> Move to "To Do"</button>
+                                                            <button class="btn btn-purple text-white"onclick="done(this)"id="15">Mark as "Done"</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -557,8 +557,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-success text-white">Approve</button>
-                                                            <button class="btn btn-danger text-white" >Reject</button>
+                                                            <button class="btn btn-success text-white"onclick="approve(this)"id="18">Approve</button>
+                                                            <button class="btn btn-danger text-white"onclick="reject(this)"id="22">Reject</button>
                                                         </div>                                                        
                                                     </div>
                                                 </div>
@@ -584,7 +584,7 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-info text-white">Move to "In Progress"</button>
+                                                            <button class="btn btn-info text-white"onclick="todo(this)" id="4">Move to "In Progress"</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -597,8 +597,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-orange text-white"> Move to "To Do"</button>
-                                                            <button class="btn btn-purple text-white" >Mark as "Done"</button>
+                                                            <button class="btn btn-orange text-white"onclick="inProgress(this)"id="12"> Move to "To Do"</button>
+                                                            <button class="btn btn-purple text-white"onclick="done(this)"id="16">Mark as "Done"</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -611,8 +611,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-success text-white">Approve</button>
-                                                            <button class="btn btn-danger text-white" >Reject</button>
+                                                            <button class="btn btn-success text-white"onclick="approve(this)"id="19">Approve</button>
+                                                            <button class="btn btn-danger text-white"onclick="reject(this)"id="23">Reject</button>
                                                         </div>
                                                         
                                                     </div>
@@ -639,7 +639,7 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-info text-white">Move to "In Progress"</button>
+                                                            <button class="btn btn-info text-white"onclick="todo(this)" id="5">Move to "In Progress"</button>
                                                         </div>
                                                         
                                                     </div>
@@ -653,8 +653,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-orange text-white"> Move to "To Do"</button>
-                                                            <button class="btn btn-purple text-white" >Mark as "Done"</button>
+                                                            <button class="btn btn-orange text-white"onclick="inProgress(this)"id="13"> Move to "To Do"</button>
+                                                            <button class="btn btn-purple text-white"onclick="done(this)"id="17">Mark as "Done"</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -667,8 +667,8 @@
                                                         <h5 class="m-b-0 font-14">Developer: Tausif Jaman</h5>
                                                         <h5 class="m-b-0 font-14">Assign Tester: Shuvo Abrar Ahmed</h5>
                                                         <div class="m-r-10">
-                                                            <button class="btn btn-success text-white">Approve</button>
-                                                            <button class="btn btn-danger text-white" >Reject</button>
+                                                            <button class="btn btn-success text-white"onclick="approve(this)"id="20">Approve</button>
+                                                            <button class="btn btn-danger text-white"onclick="reject(this)"id="24">Reject</button>
                                                         </div>
                                                         
                                                     </div>
@@ -809,6 +809,7 @@
      <!-- Main JS-->
     
      <script>
+
         function todo(elements) {
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
@@ -817,9 +818,58 @@
               myFunction(this);
             }
           };
-          xhttp.open("GET", "table.xml", true);
+          xhttp.open("GET", "table001.xml", true);
           xhttp.send();
         }
+
+        function inProgress(elements) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              //alert(elements.id);
+              myFunction(this);
+            }
+          };
+          xhttp.open("GET", "table003.xml", true);
+          xhttp.send();
+        }
+       
+        function done(elements) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              //alert(elements.id);
+              myFunction(this);
+            }
+          };
+          xhttp.open("GET", "table002.xml", true);
+          xhttp.send();
+        }
+        
+        function approve(elements) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              //alert(elements.id);
+              myFunction(this);
+            }
+          };
+          xhttp.open("GET", "table004.xml", true);
+          xhttp.send();
+        }
+
+        function reject(elements) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              alert(elements.id);
+              myFunction(this);
+            }
+          };
+          xhttp.open("GET", "table005.xml", true);
+          xhttp.send();
+        }
+
         function myFunction(xml) {
           var i;
           var parser = new DOMParser();
@@ -858,9 +908,9 @@
                         "<br>"+
                         x[i].getElementsByTagName("COMPANY1")[0].childNodes[0].nodeValue +
                         "<br>"+
-                        "<button class='btn btn-orange text-white'onclick='todo()'>Move to 'To Do'</button>" +
+                        "<button class='btn btn-orange text-white'onclick='inProgress()'>Move to 'To Do'</button>" +
                         "\n\n"+
-                        "<button class='btn btn-purple text-white'onclick='todo()'>Mark as 'Done'</button>" +
+                        "<button class='btn btn-purple text-white'onclick='done()'>Mark as 'Done'</button>" +
                         "</td>";
                     }
                     
@@ -874,7 +924,7 @@
                         "<br>"+
                         x[i].getElementsByTagName("COMPANY2")[0].childNodes[0].nodeValue +
                         "<br>"+
-                        "<button class='btn btn-success text-white'onclick='todo()'>Approve</button>" +
+                        "<button class='btn btn-success text-white'onclick='inProgress()'>Approve</button>" +
                         "\n\n"+
                         "<button class='btn btn-danger text-white'onclick='todo()'>Reject</button>" +
                         "</td>";
@@ -895,6 +945,8 @@
           }
           document.getElementById("demo").innerHTML = table;
         }
+       
+ 
         </script>
 </body>
 
